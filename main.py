@@ -16,7 +16,7 @@ email = os.getenv('MAIL')
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"Hello world from the server"}
 
 @app.get("/api/data")
 def get_data():
@@ -24,7 +24,47 @@ def get_data():
         data = json.load(f)
         return data
     
+@app.get("/api/data_paginated")
+async def get_data_pagiated( page: int = 1, limit: int = 4):
+    with open('./data/data.json') as f:
+        data = json.load(f)
+        start = (page - 1) * limit
+        end = start + limit
+        return data["project"][start:end]
     
+@app.post("/api/data")
+async def post_new_data(request: Request):
+    with open('./data/data.json') as f:
+        data = json.load(f)
+        
+    form = await request.form()
+    name = form.get('name')
+    description = form.get('description')
+    url_github = form.get('url_github')
+    url_website = form.get('url_website')
+    role = form.get('role')
+    techno = form.get('techno')
+    
+    if not name or not description or not url_github  or not role or not techno:
+        raise HTTPException(status_code=400, detail='Champs manquants')
+    
+    #write the new data to the json file
+    try :
+        with open('./data/data.json', 'w') as f:
+            techno = [t.strip() for t in techno.split(', ')]
+            data['project'].append({
+                "id": len(data['project']) + 1,
+                "name": name,
+                "description": description,
+                "url_github": url_github,
+                "url_website": url_website,
+                "role": role,
+                "techno": [techno]
+            })
+            json.dump(data, f, indent=4)
+            return JSONResponse(status_code=200, content={'message': 'Nouveau projet ajouté avec succès!', 'data': data['project'][-1]})
+    except Exception as e:
+        raise HTTPException(status_code=500, detail='Erreur lors de l\'ajout du projet: ' + str(e))
 
 @app.post("/api/send-email")
 async def send_email(request: Request):
@@ -34,8 +74,7 @@ async def send_email(request: Request):
     message = form.get('message')
     
     if not name or not email_sender or not message:
-        raise HTTPException(status_code=400, detail='Champs manquants')
-    
+        raise HTTPException(status_code=400, detail='Champs manquants') 
     
     recipient = email
     subject = f'Nouveau message de {name} depuis le portfolio!'
