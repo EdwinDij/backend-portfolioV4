@@ -7,6 +7,7 @@
             "url_github": "https://edwindij.github.io/EdwinDijeont_4_22012022/",
             "url_website": null,
             "role": "SEO",
+            "image": "../images/chouette-agence.png",
             "techno": [
                 null
             ]
@@ -18,6 +19,7 @@
             "url_github": "https://github.com/EdwinDij/EdwinDijeont_5_13022022-",
             "url_website": null,
             "role": "Front-end",
+            "image": "../images/kanap.png",
             "techno": [
                 "JavaScript"
             ]
@@ -29,6 +31,7 @@
             "url_github": "https://github.com/EdwinDij/EdwinDij-EdwinDijeont_6_03032022--",
             "url_website": null,
             "role": "Back-end",
+            "image": "../images/piiquante.jpg",
             "techno": [
                 "NodeJS",
                 "Express",
@@ -42,6 +45,7 @@
             "url_github": "https://github.com/EdwinDij/todolist",
             "url_website": null,
             "role": "Front-end",
+            "image": "../images/todoList.png",
             "techno": [
                 "React"
             ]
@@ -53,6 +57,7 @@
             "url_github": "https://github.com/EdwinDij/dijeont_edwin_n7_groupomania_020522",
             "url_website": null,
             "role": "Full-stack",
+            "image": "../images/groupomania.png",
             "techno": [
                 "NodeJS",
                 "Express",
@@ -67,6 +72,7 @@
             "url_github": "https://github.com/EdwinDij/portfoliov3.01",
             "url_website": "https://edwindij.vercel.app/",
             "role": "Front-end",
+            "image": "../images/portfolio.png",
             "techno": [
                 "NextJS"
             ]

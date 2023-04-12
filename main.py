@@ -43,6 +43,7 @@ async def post_new_data(request: Request):
     url_github = form.get('url_github')
     url_website = form.get('url_website')
     role = form.get('role')
+    image = form.get('image')
     techno = form.get('techno')
     
     if not name or not description or not url_github  or not role or not techno:
@@ -59,6 +60,7 @@ async def post_new_data(request: Request):
                 "url_github": url_github,
                 "url_website": url_website,
                 "role": role,
+                "image": image,
                 "techno": [techno]
             })
             json.dump(data, f, indent=4)
