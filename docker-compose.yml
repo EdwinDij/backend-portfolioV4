@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - ./data:/backend/data
+      - ./images:/backend/images
