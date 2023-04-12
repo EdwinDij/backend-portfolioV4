@@ -4,8 +4,9 @@
             "id": 1,
             "name": "Chouette Agence",
             "description": "Optimisation du SEO d'un site web existant (projet 4 de la formation développeur web d'Openclassrooms)",
-            "url_github": "https://edwindij.github.io/EdwinDijeont_4_22012022/",
+            "url_github": "https://edwindij.github.io/EdwinDijeont_4_22012022/",            
             "url_website": null,
+            "role": "SEO",
             "techno": [
                 null
             ]
@@ -16,6 +17,7 @@
             "description": "Site de d'achat de canapé en ligne. (projet 5 de la formation développeur web d'Openclassrooms) front-end dynamique avec un panier d'achat",
             "url_github": "https://github.com/EdwinDij/EdwinDijeont_5_13022022-",
             "url_website": null,
+            "role": "Front-end",
             "techno": [
                 "JavaScript"
             ]
@@ -26,6 +28,7 @@
             "description": "APIRest de sauces piquantes, avec authentification, système de like/dislike création de compte et CRUD pour les produits",
             "url_github": "https://github.com/EdwinDij/EdwinDij-EdwinDijeont_6_03032022--",
             "url_website": null,
+            "role": "Back-end",
             "techno": [
                 "NodeJS",
                 "Express",
@@ -38,6 +41,7 @@
             "description": "todo list en react",
             "url_github": "https://github.com/EdwinDij/todolist",
             "url_website": null,
+            "role": "Front-end",
             "techno": [
                 "React"
             ]
@@ -48,6 +52,7 @@
             "description": "Réseau social d'entreprise pour Groupomania (projet 7 de la formation développeur web d'Openclassrooms) système de like/dislike création/suppression de compte et CRUD pour les publication, avec un super admin",
             "url_github": "https://github.com/EdwinDij/dijeont_edwin_n7_groupomania_020522",
             "url_website": null,
+            "role": "Full-stack",
             "techno": [
                 "NodeJS",
                 "Express",
@@ -61,6 +66,7 @@
             "description": "Portolio précédent, fais en nextJS avec un systeme de mailing.",
             "url_github": "https://github.com/EdwinDij/portfoliov3.01",
             "url_website": "https://edwindij.vercel.app/",
+            "role": "Front-end",
             "techno": [
                 "NextJS"
             ]
@@ -71,6 +77,7 @@
             "description": "teste backend pour Tkt paris",
             "url_github": "https://github.com/EdwinDij/tkt_teste",
             "url_website": null,
+            "role": "Back-end",
             "techno": [
                 "NodeJS",
                 "Express"
@@ -82,6 +89,7 @@
             "description": "API regroupant les hommes et femmes noirs dont les inventions ont contribué à l'histoire de l'humanité.",
             "url_github": "https://github.com/EdwinDij/black_inventors",
             "url_website": "https://black-inventors.onrender.com/data/",
+            "role": "Back-end",
             "techno": [
                 "NodeJS",
                 "Express"

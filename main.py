@@ -4,9 +4,10 @@ from fastapi.exceptions import HTTPException
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 
+
 import smtplib
 import os
-import smtplib
+import json
 
 app = FastAPI()
 load_dotenv()
@@ -16,6 +17,14 @@ email = os.getenv('MAIL')
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
+
+@app.get("/api/data")
+def get_data():
+    with open('./data/data.json') as f:
+        data = json.load(f)
+        return data
+    
+    
 
 @app.post("/api/send-email")
 async def send_email(request: Request):
