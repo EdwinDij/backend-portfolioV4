@@ -4,7 +4,7 @@ services:
   backend:
     build: .
     ports:
-      - "8000:80"
+      - "8000:8080"
     volumes:
       - ./data:/backend/data
       - ./images:/backend/images
