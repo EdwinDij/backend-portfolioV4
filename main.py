@@ -4,8 +4,6 @@ from fastapi.exceptions import HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
-from fastapi_limiter import FastAPILimiter
-from fastapi_limiter.depends import RateLimiter
 
 
 import smtplib
@@ -28,25 +26,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-limiter = FastAPILimiter(
-    key_func=lambda request: request.client.host,
-    default_limits=["100/minute"]
-)
 
 @app.get("/")
-@limiter.limit("100/minute")
 def read_root():
     return {"Hello world from the server"}
 
 @app.get("/api/data")
-@limiter.limit("100/minute")
 def get_data():
     with open('./data/data.json') as f:
         data = json.load(f)
         return data
     
 @app.get("/api/data_paginated")
-@limiter.limit("100/minute")
 async def get_data_pagiated( page: int = 1, limit: int = 4):
     with open('./data/data.json') as f:
         data = json.load(f)
@@ -116,5 +107,3 @@ async def send_email(request: Request):
             return JSONResponse(status_code=200, content={'message': 'Message envoyé avec succès!'})
     except smtplib.SMTPException as e:
         raise HTTPException(status_code=500, detail='Erreur lors de l\'envoi du message: ' + str(e))
-
-app.include_router(limiter.get_api_router())
