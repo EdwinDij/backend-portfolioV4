@@ -4,6 +4,7 @@ from fastapi.exceptions import HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
+from fastapi.responses import FileResponse
 
 
 import smtplib
@@ -45,6 +46,10 @@ async def get_data_pagiated( page: int = 1, limit: int = 4):
         end = start + limit
         return data["project"][start:end]
     
+@app.get("/api/data/{image_path:path}")
+async def get_image(image_path: str):
+    return FileResponse("images/" + image_path)
+
 @app.post("/api/data")
 async def post_new_data(request: Request):
     with open('./data/data.json') as f:

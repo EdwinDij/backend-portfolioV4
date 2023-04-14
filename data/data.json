@@ -7,7 +7,7 @@
             "url_github": "https://edwindij.github.io/EdwinDijeont_4_22012022/",
             "url_website": null,
             "role": "SEO",
-            "image": "../images/chouette-agence.png",
+            "image": "/images/chouette-agence.png",
             "techno": [
                 null
             ]
@@ -19,7 +19,7 @@
             "url_github": "https://github.com/EdwinDij/EdwinDijeont_5_13022022-",
             "url_website": null,
             "role": "Front-end",
-            "image": "../images/kanap.png",
+            "image": "/images/kanap.png",
             "techno": [
                 "JavaScript"
             ]
@@ -31,7 +31,7 @@
             "url_github": "https://github.com/EdwinDij/EdwinDij-EdwinDijeont_6_03032022--",
             "url_website": null,
             "role": "Back-end",
-            "image": "../images/piiquante.jpg",
+            "image": "/images/piiquante.jpg",
             "techno": [
                 "NodeJS",
                 "Express",
@@ -45,7 +45,7 @@
             "url_github": "https://github.com/EdwinDij/todolist",
             "url_website": null,
             "role": "Front-end",
-            "image": "../images/todoList.png",
+            "image": "/images/todoList.png",
             "techno": [
                 "React"
             ]
@@ -57,7 +57,7 @@
             "url_github": "https://github.com/EdwinDij/dijeont_edwin_n7_groupomania_020522",
             "url_website": null,
             "role": "Full-stack",
-            "image": "../images/groupomania.png",
+            "image": "/images/groupomania.png",
             "techno": [
                 "NodeJS",
                 "Express",
@@ -72,7 +72,7 @@
             "url_github": "https://github.com/EdwinDij/portfoliov3.01",
             "url_website": "https://edwindij.vercel.app/",
             "role": "Front-end",
-            "image": "../images/portfolio.png",
+            "image": "/images/portfolio.png",
             "techno": [
                 "NextJS"
             ]
@@ -84,6 +84,7 @@
             "url_github": "https://github.com/EdwinDij/tkt_teste",
             "url_website": null,
             "role": "Back-end",
+            "image" : "",
             "techno": [
                 "NodeJS",
                 "Express"
@@ -96,6 +97,7 @@
             "url_github": "https://github.com/EdwinDij/black_inventors",
             "url_website": "https://black-inventors.onrender.com/data/",
             "role": "Back-end",
+            "image": "",
             "techno": [
                 "NodeJS",
                 "Express"
