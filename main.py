@@ -64,9 +64,6 @@ async def post_new_data(request: Request):
     image = form.get('image')
     techno = form.get('techno')
     
-    if not name or not description or not url_github  or not role or not techno:
-        raise HTTPException(status_code=400, detail='Champs manquants')
-    
     try :
         with open('./data/data.json', 'w') as f:
             techno = [t.strip() for t in techno.split(', ')]
