@@ -63,7 +63,9 @@ async def post_new_data(request: Request):
     role = form.get('role')
     image = form.get('image')
     techno = form.get('techno')
-
+    
+    if not name or not description or not url_github  or not role or not techno:
+        raise HTTPException(status_code=400, detail='Champs manquants')
     
     try :
         with open('./data/data.json', 'w') as f:
@@ -89,9 +91,6 @@ async def send_email(request: Request):
     name = form.get('name')
     email_sender = form.get('email')
     message = form.get('message')
-    
-    if not name or not email_sender or not message:
-        raise HTTPException(status_code=400, detail='Champs manquants') 
     
     recipient = email
     subject = f'Nouveau message de {name} depuis le portfolio!'
