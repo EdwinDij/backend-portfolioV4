@@ -102,6 +102,19 @@
                 "NodeJS",
                 "Express"
             ]
+        },
+        {
+            "id": 9,
+            "name": "backend portfolio v.4.0",
+            "description": "backend du portfolio v.4.0",
+            "url_github": "https://github.com/EdwinDij/backend-portfolioV4",
+            "url_website": null,
+            "role": "Back-end",
+            "image": "",
+            "techno": [
+                "Python",
+                "Fastapi"
+            ]
         }
     ]
 }
