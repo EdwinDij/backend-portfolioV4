@@ -6,7 +6,6 @@ from email.mime.text import MIMEText
 from dotenv import load_dotenv
 from fastapi.responses import FileResponse
 
-
 import smtplib
 import os
 import json
@@ -92,6 +91,9 @@ async def send_email(request: Request):
     email_sender = form.get('email')
     message = form.get('message')
     
+    if not name or not email_sender or not message:
+        raise HTTPException(status_code=400, detail='Champs manquants')
+       
     recipient = email
     subject = f'Nouveau message de {name} depuis le portfolio!'
     body = f'Nom: {name} \nEmail: {email_sender} \nMessage: {message}'
