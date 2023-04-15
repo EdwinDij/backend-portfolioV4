@@ -63,6 +63,7 @@ async def post_new_data(request: Request):
     role = form.get('role')
     image = form.get('image')
     techno = form.get('techno')
+
     
     try :
         with open('./data/data.json', 'w') as f:
